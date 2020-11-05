@@ -54,6 +54,8 @@ void figlio(int *vettore,
 
     Wait_Sem(sem_id, SPAZIO_DISP);
 
+    printf("Figlio: Il minimo locale è %d\n", minimo);
+    
     *buffer = minimo;
 
     Signal_Sem(sem_id, MESSAGGIO_DISP);
